@@ -1,0 +1,52 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.selectize-control.multi .selectize-input > div {
+    padding: 1px 3px;
+    margin: 0 3px 3px 0;
+    color: #fff;
+    cursor: pointer;
+    background: #3276b1;
+    border: 0 solid rgba(0, 0, 0, 0);
+}
+
+.fixoptgroup {
+    width: 230px !important;
+}
+
+.tagTemplate {
+    float: left;
+    width: auto;
+    padding: 1px 3px;
+    margin: 0 3px 3px 0;
+    color: #fff;
+    background: #3276b1;
+    border: 0 solid rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.margin-btn-10 {
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

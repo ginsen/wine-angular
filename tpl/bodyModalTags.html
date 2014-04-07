@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-sm-6 col-lg-6" ng-repeat="familia in families">
+    <div class="panel panel-default">
+      <div class="panel-heading">{{ familia.family}}</div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-sm-4 col-lg-6" ng-repeat="tag in familia.tags">
+            <small><input type="checkbox" checklist-model="modalUser.tags" checklist-value="tag.id">{{ tag.name }}</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

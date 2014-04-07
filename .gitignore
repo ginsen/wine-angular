@@ -1,0 +1,15 @@
+# -- app --
+.git/
+vendor/
+composer.lock
+info.php
+
+# -- vagrant ----
+vagrant/.vagrant/
+
+
+# -- IDE PhpStorm -------
+.idea/
+
+# -- Linux 
+*~
