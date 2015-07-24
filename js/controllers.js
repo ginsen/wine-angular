@@ -16,12 +16,6 @@ function mainCtrl(Tag, Response, Report, Culture, $timeout, $scope) {
   $scope.mainAlert = { isShown: false };
   $scope.modalAlert = { isShown: false };
 
-  function showMainAlert(alertType, message) {
-    $scope.mainAlert.message = message;
-    $scope.mainAlert.isShown = true;
-    $scope.mainAlert.alertType = alertType;
-  }
-
   function showModalAlert(alertType, message) {
     $scope.modalAlert.message = message;
     $scope.modalAlert.isShown = true;
@@ -90,7 +84,7 @@ function mainCtrl(Tag, Response, Report, Culture, $timeout, $scope) {
   $scope.setParams = function(params) {
     $scope.defaultParams = params;
     return true;
-  }
+  };
 
 
 
@@ -139,8 +133,7 @@ function mainCtrl(Tag, Response, Report, Culture, $timeout, $scope) {
     $scope.responses = Response.apiGet.get(params, {}, function(response) {
       response.forEach(function(resp) {
         resp.tags = resp.tags.split('||');
-        /** @namespace resp.exactly */
-        if (resp.exactly == 1) {
+        if (resp.exactly === 1) {
           $scope.countResultExactly++;
         } else {
           $scope.countResultAproximate++;
@@ -175,7 +168,7 @@ function mainCtrl(Tag, Response, Report, Culture, $timeout, $scope) {
    * Apply special class if the template is exactly matched with the tags of the finder
    */
   $scope.applyInfoClass = function(val) {
-    return (val == 1) ? 'info h4' : '';
+    return (val === 1) ? 'info h4' : '';
   };
 
 
@@ -203,10 +196,8 @@ function mainCtrl(Tag, Response, Report, Culture, $timeout, $scope) {
   {
     Report.api.save({}, reportParams, function(res) {
       if (res.hasOwnProperty('id')) {
-        if (refresh == true) {
+        if (refresh === true) {
           window.location = '/?siguiente=1';
-        } else {
-         //todo alert()???
         }
       }
     });

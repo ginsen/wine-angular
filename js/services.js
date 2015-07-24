@@ -8,7 +8,7 @@ angular.module('tag.services', ['ngResource']).
         broadcastChange: function(){
           $rootScope.$broadcast('handleBroadcast');
         }
-      }
+      };
     }]);
 
 angular.module('response.services', ['ngResource']).
@@ -27,7 +27,7 @@ angular.module('response.services', ['ngResource']).
         broadcastChange: function(){
           $rootScope.$broadcast('handleBroadcast');
         }
-      }
+      };
     }]);
 
 angular.module('report.services', ['ngResource']).
@@ -39,7 +39,7 @@ angular.module('report.services', ['ngResource']).
         broadcastChange: function() {
           $rootScope.$broadcast('handleBroadcast');
         }
-      }
+      };
     }]);
 
 angular.module('culture.services', ['ngResource']).
@@ -51,5 +51,5 @@ angular.module('culture.services', ['ngResource']).
         broadcastChange: function() {
           $rootScope.$broadcast('handleBroadcast');
         }
-      }
+      };
     }]);
