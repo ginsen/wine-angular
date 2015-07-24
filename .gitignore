@@ -1,11 +1,11 @@
 # -- app --
 .git/
-vendor/
+/vendor/
+/bower_components/
 composer.lock
-info.php
 
 # -- vagrant ----
-vagrant/.vagrant/
+/vagrant/.vagrant/
 
 
 # -- IDE PhpStorm -------

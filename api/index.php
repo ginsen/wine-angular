@@ -131,20 +131,19 @@ function addReport()
   }
 }
 
+
+/**
+ * @param int $template_id
+ */
 function incrementReportUsed($template_id)
 {
   $sql = "UPDATE response_template SET used = used + 1 WHERE id=:id";
 
-  try {
-    $db = getConnection();
-    $stmt = $db->prepare($sql);
-    $stmt->bindParam("id", $template_id);
-    $stmt->execute();
-    $db = null;
-  }
-  catch(PDOException $e) {
-    return $e;
-  }
+  $db = getConnection();
+  $stmt = $db->prepare($sql);
+  $stmt->bindParam("id", $template_id);
+  $stmt->execute();
+  $db = null;
 }
 
 
